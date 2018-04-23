@@ -1,0 +1,36 @@
+﻿<UserControl x:Class="ReportDesigner.MainPage"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:dxre="http://schemas.devexpress.com/winfx/2008/xaml/reportdesigner"
+             xmlns:dxr="http://schemas.devexpress.com/winfx/2008/xaml/ribbon"
+             xmlns:dxb="http://schemas.devexpress.com/winfx/2008/xaml/bars"
+             mc:Ignorable="d"
+             d:DesignHeight="300" d:DesignWidth="400">
+    <Grid>
+        <Grid.Resources>
+            <DataTemplate x:Key="RibbonTemplate">
+                <dxr:RibbonActionContainer>
+                    <dxb:RemoveBarItemAndLinkAction ItemName="reportNew" />
+                </dxr:RibbonActionContainer>
+            </DataTemplate>
+        </Grid.Resources>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="90*"/>
+            <RowDefinition Height="10*"/>
+        </Grid.RowDefinitions>
+        <dxre:ReportDesigner Name="reportDesigner"
+                             AutoStartDesign="True"
+                             dxre:BarManagerCustomization.Template="{StaticResource RibbonTemplate}"
+                             ServiceUri="../ReportService1.svc"
+                             ReportName="ReportServer.SampleReport, ReportServer"
+                             Grid.ColumnSpan="2" />
+        <Button Content="Set Categories" Grid.Row="1" Click="BtnDataSet1_Click"></Button>
+        <Button Content="Set Customers" Grid.Column="1" Grid.Row="1" Click="BtnDataSet2_Click"></Button>
+    </Grid>
+</UserControl>
