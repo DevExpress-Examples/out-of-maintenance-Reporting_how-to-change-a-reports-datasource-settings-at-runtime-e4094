@@ -1,7 +1,7 @@
 <!-- default file list -->
 *Files to look at*:
 
-* [MainPage.xaml](./CS/ReportDesigner/MainPage.xaml) (VB: [MainPage.xaml.vb](./VB/ReportDesigner/MainPage.xaml.vb))
+* [MainPage.xaml](./CS/ReportDesigner/MainPage.xaml) (VB: [MainPage.xaml](./VB/ReportDesigner/MainPage.xaml))
 * **[MainPage.xaml.cs](./CS/ReportDesigner/MainPage.xaml.cs) (VB: [MainPage.xaml.vb](./VB/ReportDesigner/MainPage.xaml.vb))**
 * [DesignerReportStore.cs](./CS/ReportServer/DesignerReportStore.cs) (VB: [DesignerReportStore.vb](./VB/ReportServer/DesignerReportStore.vb))
 * [Global.asax.cs](./CS/ReportServer/Global.asax.cs) (VB: [Global.asax.vb](./VB/ReportServer/Global.asax.vb))
